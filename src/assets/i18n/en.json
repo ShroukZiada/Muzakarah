@@ -10,7 +10,7 @@
  "SubjectsRegistered": "Subjects registered",
  "UnfinishedTask": "  Unfinished tasks",
  "CompletedTask": " Completed tasks",
- "TotalNumber": " Total number of tests passed ",
+ "total": " Total number of tests passed ",
  "materials": "Number of materials",
  "units": "Number of units ",
  "lessons": " Number of lessons ",

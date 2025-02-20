@@ -7,7 +7,7 @@
       </p>
 
       <div class="d-flex justify-content-between">
-        <img src="../../assets/images/egypt 1.png" class="me-2" alt="Egypt Flag" style="max-width: 30px;">
+        <img src="/assets/images/egypt 1.png" class="me-2" alt="Egypt Flag" style="max-width: 30px;">
         <select #mylang class=" form-select me-5 bg-transparent text-white" Style="width: 10rem;"
           (change)="onChangeLang(mylang.value)">
           <option *ngFor="let lang of languages" [value]="lang.value">
@@ -23,7 +23,7 @@
     <div class="header-Home">
       <header class=" d-flex flex-row flex-md-row justify-content-between align-items-center ">
         <div class="rightBox d-flex justify-content-between align-items-center ">
-          <img src="../../assets/images/Group.png" class="ms-5 img-fluid" alt="Logo">
+          <img src="/assets/images/Group.png" class="ms-5 img-fluid" alt="Logo">
           <div class="input-with-icon mt-2 flex-grow-1 mx-2 w-100">
             <input type="text" class="form-control" placeholder="search">
             <span class="icon left">
@@ -42,6 +42,7 @@
           </a>
         </div>
       </header>
+
       <div class="d-flex justify-content-between">
         <div class=" profile-card bg-white m-auto w-100  text-center p-4 rounded-lg mx-4 mt-4">
           <div
@@ -49,7 +50,7 @@
             <div class="d-flex">
               <!-- Avatar -->
               <img alt="User Avatar" class="rounded-circle me-md-4 mb-3 mb-md-0" height="100"
-                src="../../assets/images/Memoji.png" width="100" />
+                src="/assets/images/Memoji.png" width="100" />
               <!-- User Info -->
               <div class="flex-grow-1 mt-4 me-2 " *ngFor="let user of userList">
                 <h1 class="h4 fw-bold mb-1"> {{"username" | translate }}</h1>
@@ -123,13 +124,13 @@
         </div>
 
         <div class="col-6 col-md-3">
-          <div class="bg-purple-200  p-3 shadow-md d-flex">
+          <div class="bg-purple-200 p-3  shadow-md d-flex">
             <div class="icon-Bg mt-2 p-2  me-2">
-              <i class="fa-solid fa-user-group c-purple-200"></i>
+              <i class="fa-solid fa-trophy c-green-100"></i>
             </div>
             <div class="">
               <p class="text-2xl font-bold m-0 p-0 me-5 fw-bold">200/41</p>
-              <p class="text-2xl  m-0 p-0 me-5"> {{"TotalNumber"|translate}}</p>
+              <p class="text-2xl  m-0 p-0 me-5"> {{"total"|translate}} </p>
             </div>
           </div>
         </div>
@@ -143,47 +144,47 @@
         <thead class="bg-gray-200">
           <tr>
             <th class="p-2">
-              <img src="../../assets/images/maths (1).png" alt="">
+              <img src="/assets/images/maths (1).png" alt="">
               <p>{{'materials'|translate}}</p>
               <span>{{'materials'|translate}}</span>
             </th>
             <th class="p-2">
-              <img src="../../assets/images/book.png" alt="">
+              <img src="/assets/images/book.png" alt="">
               <p>{{"units"|translate}} </p>
               <span> {{"units"|translate}}</span>
             </th>
             <th class="p-2">
-              <img src="../../assets/images/geography.png" alt="">
+              <img src="/assets/images/geography.png" alt="">
               <p> {{"lessons" | translate}}</p>
               <span>{{"lessons"|translate}} </span>
             </th>
             <th class="p-2">
-              <img src="../../assets/images/deadline.png" alt="">
+              <img src="/assets/images/deadline.png" alt="">
               <p>{{"time"|translate}} </p>
               <span>{{"time" |translate}} </span>
             </th>
             <th class="p-2">
-              <img src="../../assets/images/geography.png" alt="">
+              <img src="/assets/images/geography.png" alt="">
               <p>{{"Achievement" |translate}}</p>
               <span>{{"Achievement" | translate}}</span>
             </th>
             <th class="p-2">
-              <img src="../../assets/images/score 1.png" alt="">
+              <img src="/assets/images/score 1.png" alt="">
               <p>{{"tests"|translate}}</p>
               <span>{{"tests" |translate}}</span>
             </th>
             <th class="p-2">
-              <img src="../../assets/images/exam 1.png" alt="">
+              <img src="/assets/images/exam 1.png" alt="">
               <p>{{"result" | translate}}</p>
               <span>{{"result"|translate}}</span>
             </th>
             <th class="p-2">
-              <img src="../../assets/images/results.png" alt="">
+              <img src="/assets/images/results.png" alt="">
               <p>{{"Rating" |translate}}</p>
               <span>{{"Rating"| translate}}</span>
             </th>
             <th class="p-2">
-              <img src="../../assets/images/report.png" alt="">
+              <img src="/assets/images/report.png" alt="">
               <p>{{"Notes" |translate}}</p>
               <span>{{"Notes" |translate}}</span>
             </th>
