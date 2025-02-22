@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   constructor(private homeService: HomeService,
     public _translate: TranslateService) {
     _translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      console.log("myevebt", event);
+      console.log("user", event);
 
     })
   }

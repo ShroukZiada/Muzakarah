@@ -23,20 +23,15 @@
  "RequiredSubjects": " Required Subjects",
  "good": "good",
  "unit": "unit",
- "Geology": "geology",
- "activity": "activity",
- "chemistry": "chemistry",
- "quran": "quran",
- "french": "french",
- "Physics": "Physics",
- "english": "english ",
- "arabic": "arabic ",
- "math": "math",
- "translatedDescription": "Students interact with the teacher by writing, speaking, and solving questions and tests.",
  "Services": "Our Services",
  "teachers": "Our teachers",
  "Testmonials": "Testmonials",
  "Contact": " Contact us",
  "copyright2": " All rights reserved Copyright © 2024 «Memory»",
- "privacy": " privacy policy"
+ "privacy": " privacy policy",
+ "math": {
+  "name": "Mathematics",
+  "description": "Students interact with the teacher through writing, speaking, and solving questions and tests.",
+  "stage": "Middle School"
+ }
 }
