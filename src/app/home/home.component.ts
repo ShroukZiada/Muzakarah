@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
 
   getSubject() {
     this.homeService.getSubject().subscribe({
-      next: (data) => {
+      next: () => {
         this.homeService.getSubject().subscribe((data) => {
           this.subjectList = data.map((subject) =>
             this.homeService.getTranslatedSubject(subject)
@@ -65,23 +65,21 @@ export class HomeComponent implements OnInit {
 
   addSubject(subject: Home.subject, event: any) {
     // console.log(subject.id);
-    const subjectExists = this.subjectsInTable.some(existingSubject => existingSubject.name === subject.name);
-    if (!subjectExists) {
-      this.subjectsInTable.push(subject);
-      // console.log(this.subjectsInTable);
-      console.log(event.currentTarget);
-      if ($(event.currentTarget).hasClass('btn-add')) {
-        $(event.currentTarget).find('.icon').removeClass('fa-plus').addClass('fa-check');
+    // const subjectExists = this.subjectsInTable.some(existingSubject => existingSubject.name === subject.name);
+    // if (!subjectExists) { }
+    // console.log(this.subjectsInTable);
+    this.subjectsInTable.push(subject);
+    console.log(event.currentTarget);
+    if ($(event.currentTarget).hasClass('btn-add')) {
+      $(event.currentTarget).find('.icon').removeClass('fa-plus').addClass('fa-check');
 
-        $(event.currentTarget).css('background-color', '#28a745');
-      }
-
-      alert("Subject added successfully");
-
+      $(event.currentTarget).css('background-color', '#28a745');
     }
-    else {
-      alert("Subject already exists");
-    }
+
+    alert("Subject added successfully");
+    // else {
+    //   alert("Subject already exists");
+    // }
   }
 
 

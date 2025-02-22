@@ -32,6 +32,9 @@
  "math": {
   "name": "Mathematics",
   "description": "Students interact with the teacher through writing, speaking, and solving questions and tests.",
-  "stage": "Middle School"
+  "stage": "Middle School",
+  "Rating": "good  ",
+  "lessons": "  lessons ",
+  "units": "units"
  }
 }

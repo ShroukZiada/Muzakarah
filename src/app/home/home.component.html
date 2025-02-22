@@ -196,10 +196,16 @@
               <p class="p-0 m-0">{{subject.name}}</p>
             </td>
             <td class="p-2">
-              <p class="p-0 m-0">{{subject.unites}}</p>
+              <p class="p-0 m-0">
+                4
+                {{subject.unites}}
+              </p>
             </td>
             <td class="p-2">
-              <p class="p-0 m-0">{{subject.lessons}}</p>
+              <p class="p-0 m-0">
+                4
+                {{subject.lessons}}
+              </p>
             </td>
             <td class="p-2">
               <p class="p-0 m-0">{{subject.time}}</p>
@@ -243,7 +249,7 @@
             <i class="fa-solid fa-plus bg-white rounded icon"></i>
           </button>
           <p class="text-sm  p-2 mt-2 ">
-            {{subject.stage | translate}}
+            {{subject.name| translate}}
           </p>
           <h4 class="text-lg font-bold card-title">
             {{subject.name | translate}}

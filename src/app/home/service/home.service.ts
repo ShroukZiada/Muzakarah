@@ -24,6 +24,9 @@ export class HomeService {
       name: this._translate.instant('math.name'),
       description: this._translate.instant('math.description'),
       stage: this._translate.instant('math.stage'),
+      Rating: this._translate.instant('math.Rating'),
+      lessons: this._translate.instant('math.lessons'),
+      unites: this._translate.instant('math.units'),
 
     };
   }
