@@ -34,7 +34,11 @@ export class HomeComponent implements OnInit {
     this.getSubject()
     // this.addSubject()
     this.onChangeLang(this.lang)
+
+
+
   }
+
 
   getUser() {
     this.homeService.getUser().subscribe({
@@ -49,12 +53,13 @@ export class HomeComponent implements OnInit {
   getSubject() {
     this.homeService.getSubject().subscribe({
       next: (data) => {
-        this.subjectList = data;
-        console.log(this.subjectList)
+        this.homeService.getSubject().subscribe((data) => {
+          this.subjectList = data.map((subject) =>
+            this.homeService.getTranslatedSubject(subject)
+          );
+          console.log(this.subjectList);
+        });
       },
-      error: (err) => {
-        console.error('Error fetching subjects:', err);
-      }
     })
   }
 
@@ -91,4 +96,11 @@ export class HomeComponent implements OnInit {
     // A simple regex to check if the text contains only English letters and spaces
     return /^[A-Za-z\s]*$/.test(text);
   }
+
+
+
+
+
+
+
 }
