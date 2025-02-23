@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="profile d-flex align-items-center">
-          <img src="../../assets/images/Memoji.png" class="rounded-circle img w-25" alt="Profile Picture">
+          <img src="/assets/images/Memoji.png" class="rounded-circle img w-25" alt="Profile Picture">
           <div class="ms-2">
             <p class="mb-0">{{"username" |translate }}</p>
             <p class="mb-0">454545</p>
@@ -263,11 +263,10 @@
       {{"RequiredSubjects"|translate}} {{subjectList.length}}
     </h2>
     <div class="row">
-      <!-- Repeat this block for each subject -->
       <div class="col-lg-3  col-sm-6 mt-3 " *ngFor="let subject of subjectList">
         <div class="card bg-white  rounded shadow-md p-3">
           <img alt="Subject Image" class="card-img- mt-3" style="border-radius:12px; width:100%;height: 45%;"
-            src="../../assets/images/Image.png" />
+            src="/assets/images/Image.png" />
           <button class="btn btn-add position-absolute top-5 " id="toggleButton" (click)="addSubject(subject,$event)">
             <i class="fa-solid fa-plus bg-white rounded icon"></i>
           </button>
@@ -324,7 +323,7 @@
           <p class="text-gray-600">
             {{"copyright2"|translate}}
           </p>
-          <img alt="Muzakarah Logo" class="mx-auto" src="../../assets/images/Muzakarah Logo-02 1.png" width="100" />
+          <img alt="Muzakarah Logo" class="mx-auto" src="/assets/images/Muzakarah Logo-02 1.png" width="100" />
           <div class="">
             <a href="#" class="text-blue-600 text-decoration-none fw-bold" style="margin-left: 8px;">
               {{"Terms"|translate}} </a>
