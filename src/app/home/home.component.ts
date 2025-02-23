@@ -48,6 +48,8 @@ export class HomeComponent implements OnInit {
     this.getUser();
     this.getSubject()
     this.onChangeLang(this.lang)
+    console.log(window.scroll);
+
   }
 
 
