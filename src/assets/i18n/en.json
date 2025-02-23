@@ -36,5 +36,9 @@
   "Rating": "good  ",
   "lessons": "  lessons ",
   "units": "units"
- }
+ },
+ "unitStaus": "don",
+ "Lesson": " Lessons",
+ "Time": " hours",
+ "rating": " good"
 }

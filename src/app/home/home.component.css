@@ -157,7 +157,8 @@ header {
    background-color: #FFFF;
    width: 30px;
    height: 35px;
-   border-radius: 10px;
+   border-radius: 5px;
+   text-align: center;
   }
  }
 }
@@ -175,14 +176,11 @@ header {
 
  .table-responsive {
   overflow-x: auto;
-  /* Enables horizontal scrolling */
  }
 
  .table-responsive table {
   width: 100%;
-  /* Ensures the table takes full width */
   border-collapse: collapse;
-  /* Collapses borders for a cleaner look */
  }
 
  .table-responsive th,
@@ -200,8 +198,8 @@ header {
  }
 
  .card .btn-add {
-  left: 29px;
-  top: 28px;
+  left: 42px;
+  top: 50px;
   background: #4A8EE8;
   color: #4A8EE8;
  }
@@ -215,6 +213,10 @@ footer {
  p,
  a {
   color: #0A142F;
+ }
+
+ .footer-links {
+  top: -5rem !important;
  }
 }
 

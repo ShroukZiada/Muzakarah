@@ -7,6 +7,7 @@ export namespace Home {
  }
 
  export interface subject {
+  isOpen: boolean;
   nameen: string,
   id: number,
   name: string,

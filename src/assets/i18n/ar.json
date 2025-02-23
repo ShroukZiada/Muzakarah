@@ -34,5 +34,9 @@
   "Rating": "جيد  ",
   "lessons": "  دروس ",
   "units": "وحدات"
- }
+ },
+ "unitStaus": "تم",
+ "Lesson": " دروس",
+ "Time": " ساعة",
+ "rating": " جيد"
 }
