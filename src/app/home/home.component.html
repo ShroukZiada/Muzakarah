@@ -1,26 +1,28 @@
 <section [dir]="lang === 'en' ? 'ltr' : 'rtl'">
   <header class="header">
-    <div class="upper-header d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="upper-header px-5 d-flex flex-column flex-md-row justify-content-between align-items-center"
+      style="font-size: 16px">
       <p class="text-white mb-0">
         Support&#64;mozakra.com
         <i class="fa-solid fa-envelope ms-2"></i>
       </p>
 
-      <div class="d-flex justify-content-between">
-        <img src="/assets/images/egypt 1.png" class="me-2" alt="Egypt Flag" style="max-width: 30px;">
-        <select #mylang class=" form-select me-5 bg-transparent " Style="width: 10rem;"
+      <div class="d-flex justify-content-between ">
+        <img src="/assets/images/egypt 1.png" alt="Egypt Flag" style="max-width: 30px;">
+        <select #mylang class=" form-select me-3 bg-transparent text-white" Style="width: 10rem;color: #fff;"
           (change)="onChangeLang(mylang.value)">
           <option *ngFor="let lang of languages" [value]="lang.value">
             {{lang.name}}
           </option>
         </select>
-        <a href="#" class="text-decoration-none list-unstyled text-white mt-2 me-3">تواصل معنا</a>
+        <a href="#" class="text-decoration-none list-unstyled text-white mt-2 me-3" style="font-size: 15px;">تواصل
+          معنا</a>
       </div>
     </div>
   </header>
 
   <section class="Home-header">
-    <div class="header-Home">
+    <div class="header-Home px-5">
       <header class=" d-flex flex-row flex-md-row justify-content-between align-items-center ">
         <div class="rightBox d-flex justify-content-between align-items-center ">
           <img src="/assets/images/Group.png" class="ms-5 img-fluid" alt="Logo">
@@ -32,10 +34,10 @@
           </div>
         </div>
         <div class="profile d-flex align-items-center">
-          <img src="/assets/images/Memoji.png" class="rounded-circle img w-25" alt="Profile Picture">
+          <img src="/assets/images/Memoji.png" class="rounded-circle img img-fluid" alt="Profile Picture">
           <div class="ms-2">
-            <p class="mb-0">{{"username" |translate }}</p>
-            <p class="mb-0">454545</p>
+            <p class="mb-0 " style="font-size: 16px; font-weight: 700;">{{"username" |translate }}</p>
+            <p class="mb-0" style="font-size: 16px; font-weight: 700;">454545</p>
           </div>
           <a href="#" class="ms-2">
             <i class="fa-solid fa-caret-down"></i>
@@ -69,7 +71,7 @@
     </div>
   </section>
 
-  <section class="Home-body">
+  <section class="Home-body px-5">
     <!-- Profile Section -->
     <div class=" d-flex justify-content-center">
       <div class="nav bg-white m-auto w-100 p-2 rounded-lg mx-4 mt-1">
@@ -138,7 +140,7 @@
     </div>
   </section>
   <!-- Table Section -->
-  <section class="table_ p-4">
+  <section class="table_ p-4 ">
     <div class="table-responsive">
       <table class="w-100 bg-transparent text-center rounded shadow-md">
         <thead class="bg-gray-200">
@@ -191,74 +193,77 @@
           </tr>
         </thead>
         <tbody>
-          <ng-container *ngFor="let subject of subjectsInTable">
-            <tr class="text-center bg-white m-5  ">
-              <td class="p-2">
-                <p class="p-0 m-0">{{subject.name}}</p>
-              </td>
-              <td class="p-2">
-                <p class="p-0 m-0">
-                  4
-                  {{subject.unites}}
-                </p>
-              </td>
-              <td class="p-2">
-                <p class="p-0 m-0">
-                  4
-                  {{subject.lessons}}
-                </p>
-              </td>
-              <td class="p-2">
-                <p class="p-0 m-0">{{subject.time}}</p>
-              </td>
-              <td class="p-2">
-                <p class="p-0 m-0">{{subject.Achievement}}</p>
-              </td>
-              <td class="p-2">
-                <p class="p-0 m-0">{{subject.tests}}</p>
-              </td>
-              <td class="p-2">
-                <p class="p-0 m-0">{{subject.result}}</p>
-              </td>
-              <td class="p-2">
-                <p class="p-0 m-0">{{subject.Rating}}</p>
-              </td>
-              <td class="p-2">
-                <p class="p-0 m-0">{{subject.Notes}}</p>
-              </td>
-              <td class="p-2 s-accordion__icon is-active " (click)=" toggleCollapse(subject.id)">
-                <button class="bg-transparent " style="border:none;">
-                  <i class="fa-solid"
-                    [ngClass]="{'fa-caret-up': !isCollapsed(subject.id), 'fa-caret-down': isCollapsed(subject.id)}"
-                    style="color: #004BFD;"></i>
-                </button>
-              </td>
-            </tr>
-            <tr *ngIf="!isCollapsed(subject.id)" class="d-flex justify-content-between">
-              <thead class="bg-white mt-4" style="display: block; width: 90rem;">
-                <div class="text-start ms-4 mt-3  fw-bold" style="font-size: 20px;">
-                  <p style="color: #004BFD;">study :</p>
-                </div>
-                <tr class="d-flex justify-content-around" *ngFor="let subject of study">
-                  <td>{{"unitStaus" | translate}}</td>
-                  <td>4{{ "Lesson"|translate}}</td>
-                  <td>20{{ "Time" | translate}}</td>
-                  <td>{{subject.Achievement}}</td>
-                  <td>{{subject.result}}</td>
-                  <td>{{"rating" |translate}}</td>
-                  <td>{{subject.Notes}}</td>
-                  <td>{{subject.tests}}</td>
-                </tr>
-              </thead>
-            </tr>
-          </ng-container>
+          <tr *ngFor="let subject of subjectsInTable" class="text-center bg-white m-5  ">
+            <td class="p-2">
+              <p class="p-0 m-0">{{subject.name}}</p>
+            </td>
+            <td class="p-2">
+              <p class="p-0 m-0">
+                4
+                {{subject.unites}}
+              </p>
+            </td>
+            <td class="p-2">
+              <p class="p-0 m-0">
+                4
+                {{subject.lessons}}
+              </p>
+            </td>
+            <td class="p-2">
+              <p class="p-0 m-0">{{subject.time}}</p>
+            </td>
+            <td class="p-2">
+              <p class="p-0 m-0">{{subject.Achievement}}</p>
+            </td>
+            <td class="p-2">
+              <p class="p-0 m-0">{{subject.tests}}</p>
+            </td>
+            <td class="p-2">
+              <p class="p-0 m-0">{{subject.result}}</p>
+            </td>
+            <td class="p-2">
+              <p class="p-0 m-0">{{subject.Rating}}</p>
+            </td>
+            <td class="p-2">
+              <p class="p-0 m-0">{{subject.Notes}}</p>
+            </td>
+            <td class="p-2 s-accordion__icon is-active " (click)=" toggleCollapse(subject.id)">
+              <button class="bg-transparent " style="border:none;">
+                <i class="fa-solid"
+                  [ngClass]="{'fa-caret-up': !isCollapsed(subject.id), 'fa-caret-down': isCollapsed(subject.id)}"
+                  style="color: #004BFD;"></i>
+              </button>
+            </td>
+          </tr>
+
         </tbody>
       </table>
+      <ng-container *ngFor="let subject of subjectsInTable">
+        <table>
+          <tr *ngIf="!isCollapsed(subject.id)" class="d-flex justify-content-between">
+            <tbody class="bg-white w-100">
+              <div class="text-start ms-4 mt-3  fw-bold" style="font-size: 20px;">
+                <p style="color: #004BFD;">study :</p>
+              </div>
+              <tr class="d-flex justify-content-around" *ngFor="let subject of study">
+                <td>{{"unitStaus" | translate}}</td>
+                <td>4{{ "Lesson"|translate}}</td>
+                <td>20{{ "Time" | translate}}</td>
+                <td>{{subject.Achievement}}</td>
+                <td>{{subject.result}}</td>
+                <td>{{"rating" |translate}}</td>
+                <td>{{subject.Notes}}</td>
+                <td>{{subject.tests}}</td>
+              </tr>
+            </tbody>
+          </tr>
+        </table>
+      </ng-container>
     </div>
   </section>
 
   <!-- Required Subjects Section -->
-  <section class="required-subject p-4">
+  <section class="required-subject px-5">
     <h2 class="text-xl font-bold mb-4">
       {{"RequiredSubjects"|translate}} {{subjectList.length}}
     </h2>
@@ -268,7 +273,7 @@
           <img alt="Subject Image" class="card-img- mt-3" style="border-radius:12px; width:100%;height: 45%;"
             src="/assets/images/Image.png" />
           <button class="btn btn-add position-absolute top-5 " id="toggleButton" (click)="addSubject(subject,$event)">
-            <i class="fa-solid fa-plus bg-white rounded icon"></i>
+            <i class="fa-solid fa-plus bg-white rounded icon" style="font-size: 20px;"></i>
           </button>
           <p class="text-sm  p-2 mt-2 ">
             {{subject.name| translate}}
