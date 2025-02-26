@@ -1,5 +1,6 @@
 {
  "username": "Alaa Ahmed Mohammed",
+ "codee": " Student code",
  "stage": "Primary education",
  "edite": "Edit Profile",
  "home": "home",
@@ -37,6 +38,7 @@
   "lessons": "  lessons ",
   "units": "units"
  },
+ "study": "study",
  "unitStaus": "don",
  "Lesson": " Lessons",
  "Time": " hours",

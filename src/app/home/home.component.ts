@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
 
   languages = [
     { name: 'العربية - مصر', value: 'ar' },
-    { name: 'UnitedStates - English', value: 'en' },
+    { name: 'UnitedStates', value: 'en' },
   ]
 
   constructor(private homeService: HomeService,
