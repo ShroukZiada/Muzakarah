@@ -52,33 +52,11 @@ header .border {
  background-color: red;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.header-Home {
- background: #E2F3FF;
- padding: 20px;
-}
-
-
-.input-group {
- margin: 0 auto;
+.header-Home .header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px 20px;
 }
 
 .input-with-icon {
@@ -128,6 +106,15 @@ header .border {
  line-height: 19.2px;
  letter-spacing: 0%;
  color: #0C5179;
+}
+
+.header-Home {
+ background: #E2F3FF;
+ padding: 20px;
+}
+
+.input-group {
+ margin: 0 auto;
 }
 
 .card-header {
@@ -184,11 +171,6 @@ header .border {
  background: #004BFD;
  color: #F2F2F2;
 }
-
-
-
-
-
 
 .Home-body .nav {
  border: 1px solid #004BFD;
@@ -521,10 +503,15 @@ hr {
 }
 
 @media (max-width: 768px) {
-
- .input-with-icon input {
-  width: 100% !important;
+ .header-Home {
+  padding: 0px 20px !important;
  }
+
+ .header-Home .header {
+  flex-direction: column;
+  align-items: flex-start;
+ }
+
 
  .active::after {
   top: 60px !important;
@@ -591,6 +578,93 @@ hr {
 
 @media (max-width: 578px) {
  .input-with-icon input {
+  width: 100%;
+ }
+}
+
+.header-Home .header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px 20px;
+}
+
+.logo img {
+ height: 50px;
+}
+
+.navbar ul {
+ display: flex;
+ list-style: none;
+}
+
+.navbar li {
+ margin: 0 15px;
+}
+
+.navbar a {
+ color: white;
+ text-decoration: none;
+}
+
+.user-info {
+ display: flex;
+ align-items: center;
+ margin-left: auto;
+}
+
+.user-info span {
+ margin: 0 10px;
+}
+
+.user-info img {
+ height: 40px;
+ /* Adjust according to avatar size */
+ border-radius: 50%;
+ /* Circular avatar */
+}
+
+.search-bar {
+ display: flex;
+}
+
+.search-bar input {
+ padding: 5px;
+ border: none;
+ border-radius: 3px;
+}
+
+.search-bar button {
+ padding: 5px 10px;
+ border: none;
+ background-color: white;
+ color: #007BFF;
+ /* Button color */
+ border-radius: 3px;
+ cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+ .header-Home .header {
+  flex-direction: column;
+  align-items: flex-start;
+ }
+
+ .navbar ul {
+  flex-direction: column;
+ }
+
+ .navbar li {
+  margin: 5px 0;
+ }
+
+ .search-bar {
+  width: 100%;
+  margin-top: 10px;
+ }
+
+ .search-bar input {
   width: 100%;
  }
 }
