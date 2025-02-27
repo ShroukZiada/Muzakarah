@@ -1,56 +1,52 @@
 <section class="" [dir]="lang === 'en' ? 'ltr' : 'rtl'">
   <header class="header">
-    <div class="upper-header px-5 d-flex flex-column flex-md-row justify-content-between align-items-center"
-      style="font-size: 16px">
-      <p class="text-white mb-0">
+    <div class="upper-header d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="support-info mb-0">
         Support&#64;mozakra.com
         <i class="fa-solid fa-envelope ms-2"></i>
       </p>
 
-      <div class="rigthbox d-flex justify-content-between position-relative">
-        <img src="/assets/images/egypt 1.png" alt="Egypt Flag" style="width: 25px;height: 25px">
-        <select #mylang class=" form-select  bg-transparent text-white" Style="width: 10rem;color: #fff;"
-          (change)="onChangeLang(mylang.value)">
-          <option *ngFor="let lang of languages" [value]="lang.value">
+      <div class="rightbox d-flex align-items-center ">
+        <img src="/assets/images/egypt 1.png" alt="Egypt Flag " class=" flag-icon">
+        <select #mylang class="selectbox bg-transparent text-white p-0 me-1 border-0 position-relative"
+          (change)="onChangeLang(mylang.value)" style="background-image: none; appearance: none;">
+          <option class="w-50" *ngFor="let lang of languages" [value]="lang.value">
             {{lang.name}}
           </option>
         </select>
-        <a href="#" class="text-decoration-none list-unstyledmt-2  me-2 mt-2">
+        <div class="border me-2"></div>
+        <a href="#" class="contact-link me-3">
           {{"Contact"|translate}}
         </a>
       </div>
     </div>
   </header>
 
-
   <div class="header-Home px-5">
-    <header class="d-flex flex-row  justify-content-between align-items-center ">
-      <div class=" rightBox d-flex justify-content-between align-items-center ">
-        <img src=" ../../assets/images/Muzakarah Logo-02 1.png" class=" img-fluid" alt="Logo">
+    <header class="d-flex justify-content-between align-items-center">
+      <div class="rightBox d-flex align-items-center">
+        <img src="../../assets/images/Muzakarah Logo-02 1.png" alt="Logo" class="logo">
 
-      </div>
-      <div class="input-with-icon mt-2 flex-grow-1 mx-2">
-        <input type="text" class="form-control" placeholder="search">
-        <span class="icon left">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </span>
+        <div class="input-with-icon mt-2 flex-grow-1 mx-2">
+          <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+          <span class="icon left">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </div>
       </div>
       <div class="profileTxx d-flex align-items-center">
-        <img src="/assets/images/Memoji.png" class="rounded-circle img img-fluid" alt="Profile Picture">
+        <img src="/assets/images/Memoji.png" class="rounded-circle img-fluid profile-pic" alt="Profile Picture">
         <div class="me-2">
-          <p class="mb-0 ">{{"username" |translate }}</p>
-          <span class="mb-0"> 454545 {{"codee" | translate}} </span>
+          <p class="mb-0 username">{{"username" | translate }}</p>
+          <span class="code">454545 {{"codee" | translate}}</span>
         </div>
-        <a href="#" class="me-2">
+        <a href="#" class="me-2" aria-label="Profile Options">
           <i class="fa-solid fa-caret-down"></i>
         </a>
       </div>
-
-
-
-
     </header>
   </div>
+
 
   <section class="card-header px-5">
     <div class="d-flex justify-content-around">
@@ -82,7 +78,7 @@
     <div class=" d-flex justify-content-center">
       <div class="nav bg-white m-auto w-100 p-4 rounded-lg">
         <nav class="d-flex flex-row align-items-center text-center position-relative flex-md-row text-md-end">
-          <a href="#" class="active me-5 text-decoration-none ">{{'home' | translate}}</a>
+          <a href="#" class="active me-5 text-decoration-none position-relative ">{{'home' | translate}}</a>
           <a href="#" class="me-5 text-decoration-none">{{'Unfinishedtasks'|translate}} </a>
           <a href="#" class="me-5 text-decoration-none">{{'CompletedTasks'|translate}} </a>
           <a href="#" class="me-5 text-decoration-none">{{'TestYourself'|translate}} </a>
@@ -281,8 +277,8 @@
     <div class="row">
       <div class="col-lg-3  col-sm-6 mt-3 " *ngFor="let subject of subjectList">
         <div class="card bg-white shadow  rounded shadow-md p-2">
-          <img alt="Subject Image" class="card-img- mt-3" src="/assets/images/Image.png" />
-          <button class="btn btn-add position-absolute top-5 " id="toggleButton" (click)="addSubject(subject,$event)">
+          <img alt="Subject Image" class="card-img- " src="/assets/images/Image.png" />
+          <button class="btn btn-add position-absolute top-5" id="toggleButton" (click)="addSubject(subject,$event)">
             <i class="fa-solid fa-plus bg-white rounded icon"></i>
           </button>
           <p class="text-sm  p-2 mt-2 ">
@@ -301,7 +297,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="position-relative mt-4 w-100">
+  <footer class="position-relative mt-4 w-100 bg-blue-100">
     <svg viewBox="0 0 1440 210" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd"
         d="M-1 0H1440V121.019C1440 121.019 1079.18 209.145 719.121 209.145C359.06 209.145 -1 121.019 -1 121.019V0Z"
@@ -309,35 +305,37 @@
     </svg>
 
     <div class="container">
-      <div class="footer-links d-flex justify-content-between align-items-center">
+      <div class="footer-links d-flex flex-wrap justify-content-between align-items-center">
         <nav class="service flex space-x-4">
-          <a href="#" class="text-blue-600 text-decoration-none">{{"Services" | translate}}</a>
-          <a href="#" class="text-blue-600 text-decoration-none">{{"teachers" | translate}}</a>
-          <a href="#" class="text-blue-600 text-decoration-none">{{"Testmonials" | translate}}</a>
-          <a href="#" class="text-blue-600 text-decoration-none">{{"Contact" | translate}}</a>
+          <a href="#" class="text-blue-600 text-decoration-none" aria-label="Services">{{"Services" | translate}}</a>
+          <a href="#" class="text-blue-600 text-decoration-none" aria-label="Teachers">{{"teachers" | translate}}</a>
+          <a href="#" class="text-blue-600 text-decoration-none" aria-label="Testimonials">{{"Testmonials" |
+            translate}}</a>
+          <a href="#" class="text-blue-600 text-decoration-none" aria-label="Contact">{{"Contact" | translate}}</a>
         </nav>
         <div class="links">
-          <a href="#" class="text-blue-600 text-decoration-none">
+          <a href="#" class="text-blue-600 text-decoration-none" aria-label="Facebook">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="#" class="text-blue-600 text-decoration-none">
+          <a href="#" class="text-blue-600 text-decoration-none" aria-label="Twitter">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="#" class="text-blue-600 text-decoration-none">
+          <a href="#" class="text-blue-600 text-decoration-none" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="#" class="text-blue-600 text-decoration-none">
+          <a href="#" class="text-blue-600 text-decoration-none" aria-label="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
       </div>
       <hr class="position-relative">
-      <div class="low-footer d-flex justify-content-between position-relative">
+      <div class="low-footer d-flex flex-wrap justify-content-between align-items-center position-relative">
         <p>{{"copyright2" | translate}}</p>
         <img alt="Muzakarah Logo" class="mx-auto" src="/assets/images/Muzakarah Logo-02 1.png" width="100" />
         <div class="privacy">
-          <a href="#" class="text-blue-600 text-decoration-none fw-bold">{{"privacy" | translate}}</a>
-          <a href="#" class="text-blue-600 text-decoration-none fw-bold">{{"Terms" | translate}}</a>
+          <a href="#" class="text-blue-600 text-decoration-none fw-bold" aria-label="Privacy Policy">{{"privacy" |
+            translate}}</a>
+          <a href="#" class="text-blue-600 text-decoration-none fw-bold" aria-label="Terms">{{"Terms" | translate}}</a>
         </div>
       </div>
     </div>

@@ -1,38 +1,77 @@
 header .upper-header {
  background: #004BFD;
- padding: 5px;
- font-family: Tajawal;
+ padding: 20px;
+ font-family: Tajawal, sans-serif;
  font-weight: 500;
  font-size: 15px;
  line-height: 18px;
- letter-spacing: 0%;
- padding: 20px;
-
-}
-
-header .upper-header .rigthbox .form-select,
-header .upper-header .rigthbox a {
- border: none;
- font-family: Tajawal;
- font-weight: 500;
- font-size: 13px;
- line-height: 15.6px;
- letter-spacing: 0%;
  color: #F2F2F2;
 }
 
-header .upper-header .rigthbox::after {
- position: absolute;
- content: '';
- width: 2px;
- height: 21px;
- background: #F2F2F2;
- top: 5px;
- left: 99px;
+header .support-info {
+ font-size: 16px;
 }
 
-.header-Home {
+header .rightbox {
+ display: flex;
+ align-items: center;
+}
 
+header .flag-icon {
+ width: 25px;
+ height: 25px;
+ margin-right: 10px;
+ /* Space between flag and select */
+}
+
+header .form-select {
+ background: transparent;
+ border: none;
+ color: #F2F2F2;
+ font-family: Tajawal, sans-serif;
+ font-weight: 500;
+ font-size: 13px;
+ line-height: 15.6px;
+ margin-right: 10px;
+ /* Space between select and link */
+}
+
+header .contact-link {
+ text-decoration: none;
+ color: #F2F2F2;
+ font-family: Tajawal, sans-serif;
+ font-weight: 500;
+ font-size: 13px;
+ line-height: 15.6px;
+}
+
+header .border {
+
+ width: 2px;
+ height: 27px;
+ background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header-Home {
  background: #E2F3FF;
  padding: 20px;
 }
@@ -183,9 +222,9 @@ header .upper-header .rigthbox::after {
  background: #2362f7;
  position: absolute;
  width: 104px;
- height: 5px;
+ height: 3px;
  top: 41px;
- right: 15px;
+ right: -57px;
 }
 
 .status h1 {
@@ -393,8 +432,8 @@ tbody .fr-tr td p {
 }
 
 .card .btn-add {
- left: 42px;
- top: 50px;
+ right: 32px;
+ top: 25px;
  background: #4A8EE8;
  color: #4A8EE8;
  font-size: 28px;
@@ -406,7 +445,6 @@ tbody .fr-tr td p {
  font-size: 18px;
  line-height: 20px;
  letter-spacing: 0%;
- text-align: right;
  color: #D3D3D3;
 }
 
@@ -432,8 +470,7 @@ footer .links a i {
 }
 
 .low-footer {
- padding: 10px;
- background-color: #f7f7f7;
+ top: -140px;
 }
 
 .low-footer p {
@@ -470,27 +507,27 @@ hr {
  width: 100%;
 }
 
-/* Responsive design */
+
 
 @media (max-width: 480px) {
-
-
  .footer-links {
   padding: 10px;
  }
 
  .low-footer {
   padding: 10px;
+  top: 0px !important;
  }
 }
 
 @media (max-width: 768px) {
+
  .input-with-icon input {
   width: 100% !important;
  }
 
  .active::after {
-  top: 61px !important;
+  top: 60px !important;
   right: -15px !important;
  }
 
@@ -551,11 +588,6 @@ hr {
   display: none !important;
  }
 }
-
-
-
-
-
 
 @media (max-width: 578px) {
  .input-with-icon input {
